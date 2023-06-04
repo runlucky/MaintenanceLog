@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1911B7182A2B5C6A001C944E /* MaintenanceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1911B7172A2B5C6A001C944E /* MaintenanceListView.swift */; };
+		1911B71A2A2B5C87001C944E /* SpecListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1911B7192A2B5C87001C944E /* SpecListView.swift */; };
+		1911B71D2A2B652F001C944E /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1911B71C2A2B652F001C944E /* DIContainer.swift */; };
+		1911B71F2A2B6888001C944E /* MaintenanceReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1911B71E2A2B6888001C944E /* MaintenanceReport.swift */; };
+		1911B7222A2B773D001C944E /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1911B7212A2B773D001C944E /* AddButton.swift */; };
+		1911B7252A2B78D6001C944E /* MaintenanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1911B7242A2B78D6001C944E /* MaintenanceView.swift */; };
 		199820682A263D7000DC74CF /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199820672A263D7000DC74CF /* App.swift */; };
 		1998206A2A263D7000DC74CF /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199820692A263D7000DC74CF /* RootView.swift */; };
 		1998206C2A263D7100DC74CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1998206B2A263D7100DC74CF /* Assets.xcassets */; };
@@ -19,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1911B7172A2B5C6A001C944E /* MaintenanceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceListView.swift; sourceTree = "<group>"; };
+		1911B7192A2B5C87001C944E /* SpecListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecListView.swift; sourceTree = "<group>"; };
+		1911B71C2A2B652F001C944E /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		1911B71E2A2B6888001C944E /* MaintenanceReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceReport.swift; sourceTree = "<group>"; };
+		1911B7212A2B773D001C944E /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		1911B7242A2B78D6001C944E /* MaintenanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceView.swift; sourceTree = "<group>"; };
 		199820642A263D7000DC74CF /* MaintenanceLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaintenanceLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		199820672A263D7000DC74CF /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		199820692A263D7000DC74CF /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -42,6 +54,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1911B71B2A2B6511001C944E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				19E2A2842A2B1287003E8729 /* Storage */,
+				1911B71C2A2B652F001C944E /* DIContainer.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1911B7202A2B7730001C944E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1911B7212A2B773D001C944E /* AddButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1911B7232A2B78CA001C944E /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		1998205B2A263D7000DC74CF = {
 			isa = PBXGroup;
 			children = (
@@ -61,8 +97,8 @@
 		199820662A263D7000DC74CF /* MaintenanceLog */ = {
 			isa = PBXGroup;
 			children = (
-				19E2A2842A2B1287003E8729 /* Storage */,
-				199820752A278F2200DC74CF /* FuelEfficiency */,
+				19E2A2892A2B5A94003E8729 /* Views */,
+				1911B71B2A2B6511001C944E /* Utils */,
 				199820672A263D7000DC74CF /* App.swift */,
 				199820692A263D7000DC74CF /* RootView.swift */,
 				1998206B2A263D7100DC74CF /* Assets.xcassets */,
@@ -96,6 +132,36 @@
 				19E2A2852A2B1296003E8729 /* IStorage.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		19E2A2872A2B5A6D003E8729 /* Spec */ = {
+			isa = PBXGroup;
+			children = (
+				1911B7192A2B5C87001C944E /* SpecListView.swift */,
+			);
+			path = Spec;
+			sourceTree = "<group>";
+		};
+		19E2A2882A2B5A7C003E8729 /* Maintenance */ = {
+			isa = PBXGroup;
+			children = (
+				1911B7232A2B78CA001C944E /* New Group */,
+				1911B7172A2B5C6A001C944E /* MaintenanceListView.swift */,
+				1911B71E2A2B6888001C944E /* MaintenanceReport.swift */,
+				1911B7242A2B78D6001C944E /* MaintenanceView.swift */,
+			);
+			path = Maintenance;
+			sourceTree = "<group>";
+		};
+		19E2A2892A2B5A94003E8729 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1911B7202A2B7730001C944E /* Components */,
+				199820752A278F2200DC74CF /* FuelEfficiency */,
+				19E2A2882A2B5A7C003E8729 /* Maintenance */,
+				19E2A2872A2B5A6D003E8729 /* Spec */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,11 +235,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1998206A2A263D7000DC74CF /* RootView.swift in Sources */,
+				1911B71F2A2B6888001C944E /* MaintenanceReport.swift in Sources */,
 				199820682A263D7000DC74CF /* App.swift in Sources */,
+				1911B7222A2B773D001C944E /* AddButton.swift in Sources */,
+				1911B71D2A2B652F001C944E /* DIContainer.swift in Sources */,
 				19E2A2812A2B021D003E8729 /* FuelEfficiency.swift in Sources */,
 				199820772A278F4800DC74CF /* FuelEfficiencyView.swift in Sources */,
+				1911B7252A2B78D6001C944E /* MaintenanceView.swift in Sources */,
 				19E2A2862A2B1296003E8729 /* IStorage.swift in Sources */,
+				1911B71A2A2B5C87001C944E /* SpecListView.swift in Sources */,
 				199820792A278F5D00DC74CF /* FuelEfficiencyListView.swift in Sources */,
+				1911B7182A2B5C6A001C944E /* MaintenanceListView.swift in Sources */,
 				19E2A2832A2B0315003E8729 /* UserDefaultsStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,17 +2,19 @@ import Foundation
 import SwiftUI
 
 struct RootView: View {
+    let storage = UserDefaultsStorage(.standard, bundleIdentifier: Bundle.main.bundleIdentifier!)
+    
     var body: some View {
         TabView {
-            FuelEfficiencyListView(UserDefaultsStorage(.standard, bundleIdentifier: Bundle.main.bundleIdentifier!))
+            FuelEfficiencyListView(storage)
                 .tabItem {
                     Label("燃費", systemImage: "fuelpump.fill")
                 }
-            Text("b")
+            MaintenanceListView(storage)
                 .tabItem {
                     Label("整備記録", systemImage: "wrench.adjustable.fill")
                 }
-            Text("a")
+            SpecListView()
                 .tabItem {
                     Label("車体情報", systemImage: "car")
                 }
@@ -28,24 +30,6 @@ struct ContentView_Previews: PreviewProvider {
 
 
 
-struct Log: Codable {
-    let timestamp: Date
-    let group: LogGroup
-    let text: String
-}
-
-protocol ILog {
-    var timestamp: Date { get }
-    var text: String { get }
-}
-
-
-struct MaintenanceReport: Codable {
-    let timestamp: Date
-    let odometer: Double?
-    let memo: String
-    let image: URL?
-}
 
 
 

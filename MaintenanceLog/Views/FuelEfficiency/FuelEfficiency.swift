@@ -12,5 +12,5 @@ struct FuelEfficiency: Codable {
 }
 
 extension FuelEfficiency: Identifiable {
-    var id: Int { odometer }
+    var id: String { timestamp.description + odometer.description }
 }

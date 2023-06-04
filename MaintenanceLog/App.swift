@@ -9,9 +9,19 @@ import SwiftUI
 
 @main
 struct Main: App {
+    init() {
+        registerContainer()
+    }
+    
     var body: some Scene {
         WindowGroup {
             RootView()
+        }
+    }
+    
+    private func registerContainer() {
+        container.register(IStorage.self, .default) {
+            UserDefaultsStorage(.standard, bundleIdentifier: Bundle.main.bundleIdentifier!)
         }
     }
 }

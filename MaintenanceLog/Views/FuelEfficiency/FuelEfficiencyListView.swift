@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 
 internal struct FuelEfficiencyListView: View {
-    @State var items: [FuelEfficiency] = []
+    @State var items: [FuelEfficiency]
     let storage: IStorage
     
     init(_ storage: IStorage) {
@@ -19,7 +19,7 @@ internal struct FuelEfficiencyListView: View {
                 }
             }
 
-            Button(action: {
+            AddButton {
                 let item = FuelEfficiency(timestamp: Date(),
                                           odometer: 10000 + items.count,
                                           tripmeter: 100 + items.count,
@@ -28,12 +28,7 @@ internal struct FuelEfficiencyListView: View {
                 
                 items.append(item)
                 try? storage.upsert(key: "FuelEfficiencyList", value: items)
-            }, label: {
-                Image(systemName: "plus.circle.fill")
-                    .resizable()
-                    .frame(width: 50, height: 50)
-                    .foregroundColor(.green)
-            })
+            }
             .padding(10)
         }
     }
